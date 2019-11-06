@@ -1,8 +1,6 @@
 <?php
 namespace Latrell\RongCloud;
 
-use RongCloud\Api;
-
 class RongCloud
 {
 
