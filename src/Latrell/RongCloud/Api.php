@@ -7,7 +7,7 @@
  * @date    2016-01-06  15:30
  *
  */
-namespace RongCloud;
+namespace Latrell\RongCloud;
 
 use \Exception;
 
