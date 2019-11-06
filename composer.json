@@ -1,0 +1,22 @@
+{
+    "name": "captainnx/rongcloud",
+    "description": "融云服务端SDK在Laravel的封装包。",
+    "keywords": ["L5", "Laravel 5", "Laravel", "RongCloud", "RongCloud SDK"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "captain",
+            "email": "captain.nx@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Latrell\\RongCloud\\": "src/Latrell/RongCloud/"
+        }
+    },
+    "minimum-stability": "stable"
+}
