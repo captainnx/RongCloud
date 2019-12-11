@@ -60,6 +60,26 @@ class Api
     }
 
     /**
+     * 获取 用户信息
+     * @param $userId   用户 Id，最大长度 32 字节。是用户在 App 中的唯一标识码，必须保证在同一个 App 内不重复，重复的用户 Id 将被当作是同一用户。
+     * @return json|xml
+     */
+    public function getUserInfo($userId)
+    {
+        try {
+            if (empty($userId))
+                throw new Exception('用户 Id 不能为空');
+
+            $ret = $this->curl('/user/info', array('userId' => $userId));
+            if (empty($ret))
+                throw new Exception('请求失败');
+            return $ret;
+        } catch (Exception $e) {
+            print_r($e->getMessage());
+        }
+    }
+
+    /**
      * 发送会话消息
      * @param $fromUserId   发送人用户 Id。（必传）
      * @param $toUserId     接收用户 Id，提供多个本参数可以实现向多人发送消息。注意：向多人发送消息时，本参数为数组（必传）
